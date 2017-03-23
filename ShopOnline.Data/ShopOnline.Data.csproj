@@ -38,6 +38,14 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -60,10 +68,38 @@
     <Compile Include="Migrations\201703211545319_InitialDB.Designer.cs">
       <DependentUpon>201703211545319_InitialDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703221640495_AddErrorTable.cs" />
+    <Compile Include="Migrations\201703221640495_AddErrorTable.Designer.cs">
+      <DependentUpon>201703221640495_AddErrorTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703222124094_Intergrate-AspnetIdentity.cs" />
+    <Compile Include="Migrations\201703222124094_Intergrate-AspnetIdentity.Designer.cs">
+      <DependentUpon>201703222124094_Intergrate-AspnetIdentity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703222144510_Changkey.cs" />
+    <Compile Include="Migrations\201703222144510_Changkey.Designer.cs">
+      <DependentUpon>201703222144510_Changkey.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reponsitories\ProductCategoryRepository.cs" />
-    <Compile Include="Reponsitories\ProductRepository.cs" />
+    <Compile Include="Repositories\ErrorRepository.cs" />
+    <Compile Include="Repositories\FooterRepository.cs" />
+    <Compile Include="Repositories\MenuGroupRepository.cs" />
+    <Compile Include="Repositories\MenuRepository.cs" />
+    <Compile Include="Repositories\OrderDetailRepository.cs" />
+    <Compile Include="Repositories\OrderRepository.cs" />
+    <Compile Include="Repositories\PageRepository.cs" />
+    <Compile Include="Repositories\PostCategoryRepository.cs" />
+    <Compile Include="Repositories\PostRepository.cs" />
+    <Compile Include="Repositories\PostTagRepository.cs" />
+    <Compile Include="Repositories\ProductCategoryRepository.cs" />
+    <Compile Include="Repositories\ProductRepository.cs" />
+    <Compile Include="Repositories\ProductTagRepository.cs" />
+    <Compile Include="Repositories\SlideRepository.cs" />
+    <Compile Include="Repositories\SupportOnlineRepository.cs" />
+    <Compile Include="Repositories\SystemConfigRepository.cs" />
+    <Compile Include="Repositories\TagRepository.cs" />
+    <Compile Include="Repositories\VisitorStatisticRepository.cs" />
     <Compile Include="ShopOnlineDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -83,6 +119,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201703211545319_InitialDB.resx">
       <DependentUpon>201703211545319_InitialDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703221640495_AddErrorTable.resx">
+      <DependentUpon>201703221640495_AddErrorTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703222124094_Intergrate-AspnetIdentity.resx">
+      <DependentUpon>201703222124094_Intergrate-AspnetIdentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703222144510_Changkey.resx">
+      <DependentUpon>201703222144510_Changkey.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
